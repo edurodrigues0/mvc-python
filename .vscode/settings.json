@@ -3,5 +3,12 @@
   "python.linting.pylintEnabled": true,
   "[python]": {
     "editor.tabSize": 2
+  },
+  "files.exclude": {
+    "**/.pyc": {
+      "when": "$(basename).py"
+    },
+    "**/__pycache__": true,
+    "**/*.pytest_cache": true
   }
 }
