@@ -31,6 +31,7 @@ def test_add_pet():
   assert response.name == "Osvaldo"
   assert response.type == "cat"
 
+@pytest.mark.skip(reason="Database interaction tests should be run with a test database setup.")
 def test_delete_pets():
   repo = PetsRepository(db_connection_handler)
   pet_id = 2

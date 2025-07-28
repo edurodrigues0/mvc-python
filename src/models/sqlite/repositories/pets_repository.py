@@ -26,6 +26,7 @@ class PetsRepository:
       try:
         database.session.add(pet)
         database.session.commit()
+        database.session.refresh(pet)
         return pet
       except Exception as e:
         database.session.rollback()
