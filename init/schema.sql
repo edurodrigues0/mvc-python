@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS 'peoples' (
   FOREIGN KEY (pet_id) REFERENCES pets(id)
 );
 
-INSERT INT pets (name, type)
+INSERT INTO pets (name, type)
 VALUES
   ("cao", "dog"),
   ("gato", "cat"),
