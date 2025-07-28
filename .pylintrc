@@ -4,7 +4,6 @@ disable=
       C0114, # missing-module-docstring
       C0115, # miising-class-docstring
       C0116, # missing-function-docstring
-      R0903, # too-few-public-methods
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
 # only in one or another interpreter, leading to false positives when analysed.
@@ -325,7 +324,7 @@ max-returns=6
 max-statements=50
 
 # Minimum number of public methods for a class (see R0903).
-min-public-methods=2
+min-public-methods=0
 
 
 [EXCEPTIONS]
