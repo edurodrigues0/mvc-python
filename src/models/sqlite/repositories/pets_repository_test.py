@@ -35,3 +35,13 @@ def test_get_all_pets():
   assert len(pets) == 2
   assert pets[0].name == "Rex"
   assert pets[1].name == "Mittens"
+
+def test_delete_pets():
+  mock_connection = MockConnectionHandler()
+  repository = PetsRepository(mock_connection)
+
+  repository.delete_pets(1)
+
+  mock_connection.session.query.assert_called_once_with(PetsTable)
+  mock_connection.session.filter.assert_called_once_with(PetsTable.id == 1)
+  mock_connection.session.delete.assert_called_once()
